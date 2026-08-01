@@ -24,7 +24,7 @@ export async function authenticate(req: FastifyRequest, reply: FastifyReply) {
     // Local demo/dev environment fallback
     req.user = {
       id: "a94f4c29-adb5-4cc3-a113-59c8851dab1e",
-      email: "kaveesh@vyuha.ai",
+      email: "kaveesh@zora.ai",
       role: "admin"
     };
     return;

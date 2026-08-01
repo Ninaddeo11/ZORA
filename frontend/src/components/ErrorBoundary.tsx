@@ -21,7 +21,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Uncaught error in VYUHA.AI UI:", error, errorInfo);
+    console.error("Uncaught error in ZORA UI:", error, errorInfo);
   }
 
   public render() {

@@ -43,7 +43,7 @@ export default async function findingsRoutes(app: FastifyInstance) {
           ip: asset ? asset.ip_address || "0.0.0.0" : "0.0.0.0",
           timestamp: f.detected_at || new Date().toISOString(),
           description: f.description || "",
-          detector: "VYUHA Core Agent"
+          detector: "ZORA Core Agent"
         };
       });
 
@@ -106,7 +106,7 @@ export default async function findingsRoutes(app: FastifyInstance) {
         ip: asset ? asset.ip_address || "0.0.0.0" : "0.0.0.0",
         timestamp: data.detected_at || new Date().toISOString(),
         description: data.description || "",
-        detector: "VYUHA Core Agent"
+        detector: "ZORA Core Agent"
       };
     }
   );

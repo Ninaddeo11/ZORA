@@ -12,7 +12,7 @@ interface ErrorPageProps {
 export function ErrorPage({ error, resetError }: ErrorPageProps) {
   
   const handleCopyLogs = () => {
-    const logText = `VYUHA.AI UI CRASH REPORT\nMessage: ${error?.message || "Unknown error"}\nStack: ${error?.stack || "No stack trace available"}`;
+    const logText = `ZORA UI CRASH REPORT\nMessage: ${error?.message || "Unknown error"}\nStack: ${error?.stack || "No stack trace available"}`;
     navigator.clipboard.writeText(logText);
     toast.success("Crash logs copied to clipboard!");
   };
@@ -40,7 +40,7 @@ export function ErrorPage({ error, resetError }: ErrorPageProps) {
             SYSTEM.RENDER_CRASH_DETECTION
           </CardTitle>
           <CardDescription className="text-slate-400 font-mono text-[9px] uppercase mt-1">
-            Error Intercepted by VYUHA.AI SOC Boundary Guard
+            Error Intercepted by ZORA SOC Boundary Guard
           </CardDescription>
         </CardHeader>
 

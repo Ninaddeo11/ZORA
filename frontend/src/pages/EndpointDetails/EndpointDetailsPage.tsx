@@ -22,7 +22,7 @@ import {
   useEndpointDetailData, 
   useToggleIsolationMutation, 
   useTerminateProcessMutation 
-} from "../../hooks/queries/useVyuhaQueries";
+} from "../../hooks/queries/useZoraQueries";
 import { Endpoint, SystemProcess, CVEInfo } from "../../types";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../../components/ui/Card";
 import { Badge } from "../../components/ui/Badge";
@@ -89,7 +89,7 @@ export function EndpointDetailsPage() {
     `[2026-07-12 03:41:04] [WARN] Process spawn: powershell.exe -ExecutionPolicy Bypass -NoProfile -EncodedCommand Q2xlYXI...`,
     `[2026-07-12 03:38:10] [ALERT] LSASS process memory dump dump query recorded on PID 652 by NT AUTHORITY\\SYSTEM`,
     `[2026-07-12 03:37:05] [INFO] Connection established: RDP session from 10.120.40.112:54890`,
-    `[2026-07-12 03:12:44] [INFO] DNS lookup: ad-dc-windows-01.vyuha.internal resolved to ${endpoint.ip}`,
+    `[2026-07-12 03:12:44] [INFO] DNS lookup: ad-dc-windows-01.zora.internal resolved to ${endpoint.ip}`,
   ];
 
   // Playbook recommendations
@@ -284,7 +284,7 @@ export function EndpointDetailsPage() {
                     </div>
                     <div className="space-y-1">
                       <span className="text-[10px] font-mono uppercase tracking-wider text-blue-900 font-bold block">
-                        VYUHA.AI Host Audit Insights
+                        ZORA Host Audit Insights
                       </span>
                       <p className="text-xs text-slate-600 leading-relaxed font-sans max-w-[640px]">
                         {endpoint.id === "web-prod-ubuntu-01" ? (

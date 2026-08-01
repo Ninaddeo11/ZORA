@@ -28,7 +28,7 @@ import { Badge } from "../../components/ui/Badge";
 import { Button } from "../../components/ui/Button";
 import { cn } from "../../utils/cn";
 import { toast } from "sonner";
-import { useAttackGraphData } from "../../hooks/queries/useVyuhaQueries";
+import { useAttackGraphData } from "../../hooks/queries/useZoraQueries";
 
 // Node Interface details
 interface AttackNodeData {

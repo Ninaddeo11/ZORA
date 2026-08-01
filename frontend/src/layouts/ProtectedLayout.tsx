@@ -5,7 +5,7 @@ import { useAuth } from "../hooks/useAuth";
 import { Sidebar } from "../components/Sidebar";
 import { Navbar } from "../components/Navbar";
 import { CommandMenu } from "../components/CommandMenu";
-import { useCopilotMutation, useEndpointsData } from "../hooks/queries/useVyuhaQueries";
+import { useCopilotMutation, useEndpointsData } from "../hooks/queries/useZoraQueries";
 import { Button } from "../components/ui/Button";
 import { Badge } from "../components/ui/Badge";
 import { cn } from "../utils/cn";
@@ -83,7 +83,7 @@ export function ProtectedLayout() {
   const [chatMessages, setChatMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hello! I am VYUHA.AI's Cyber Security Copilot. I scan security telemetry, analyze endpoint vulnerabilities, and run incident playbooks. Ask me about CVEs, credential access on ad-dc-windows-01, SSH logins on web-prod-ubuntu-01, or pending isolation requests.",
+      content: "Hello! I am ZORA's Cyber Security Copilot. I scan security telemetry, analyze endpoint vulnerabilities, and run incident playbooks. Ask me about CVEs, credential access on ad-dc-windows-01, SSH logins on web-prod-ubuntu-01, or pending isolation requests.",
       actions: [
         { label: "Analyze web-prod-ubuntu-01", action: "ask", payload: "analyze xz-backdoor vulnerability" },
         { label: "Investigate ad-dc-windows-01", action: "ask", payload: "review lsass memory dump" }
@@ -319,7 +319,7 @@ export function ProtectedLayout() {
             </div>
             <div>
               <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">
-                VYUHA.AI COPILOT
+                ZORA COPILOT
               </span>
               <p className="text-[9px] text-slate-500 dark:text-slate-400">Guided SOC response workspace</p>
             </div>

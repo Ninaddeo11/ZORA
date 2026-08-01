@@ -1,10 +1,10 @@
-# 🛡️ VYUHA.AI
+# 🛡️ ZORA
  **AI-Powered Endpoint Detection & Response (EDR) Platform with Attack Path Intelligence and AI-Assisted Remediation**
 
 # Overview
-VYUHA.AI is an AI-powered Endpoint Detection & Response (EDR) platform that transforms raw vulnerability scan data into actionable security intelligence.
+ZORA is an AI-powered Endpoint Detection & Response (EDR) platform that transforms raw vulnerability scan data into actionable security intelligence.
 
-Unlike traditional vulnerability scanners that simply list CVEs, VYUHA.AI correlates vulnerabilities into probable attack paths, prioritizes risks using real-world threat intelligence, and assists analysts through an AI-powered SOC Copilot while keeping humans in complete control of remediation.
+Unlike traditional vulnerability scanners that simply list CVEs, ZORA correlates vulnerabilities into probable attack paths, prioritizes risks using real-world threat intelligence, and assists analysts through an AI-powered SOC Copilot while keeping humans in complete control of remediation.
 
 
 # Features
@@ -76,7 +76,7 @@ Unlike traditional vulnerability scanners that simply list CVEs, VYUHA.AI correl
 
 ## 📂 Project Structure
 ```text
-VYUHA-AI/
+ZORA/
 │
 ├── frontend/
 │   ├── src/
@@ -119,8 +119,8 @@ VYUHA-AI/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/Akshu121796/VYUHA-AI.git
-cd VYUHA-AI
+git clone https://github.com/Akshu121796/ZORA.git
+cd ZORA
 ```
 
 ---
@@ -210,6 +210,6 @@ This project is licensed under the **MIT License**.
 
 <p align="center">
 
-### 🛡️ *VYUHA.AI — Think Like an Attacker. Defend Like an Analyst.*
+### 🛡️ *ZORA — Think Like an Attacker. Defend Like an Analyst.*
 
 </p>

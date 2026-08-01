@@ -29,7 +29,7 @@ let localReports = [
   { id: "REP-2026-003", title: "ISO27001 Access Management Audit Log", timestamp: "02:15:00 Z", size: "2.1 MB", format: "PDF" as const, downloadCount: 8 }
 ];
 let localSettings = {
-  profile: { name: "Kaveesh", email: "kaveesh@vyuha.ai", title: "Senior SOC Analyst" },
+  profile: { name: "Kaveesh", email: "kaveesh@zora.ai", title: "Senior SOC Analyst" },
   theme: { contrast: "standard" },
   notifications: { slack: "https://hooks.slack.com/services/T00/B00/X00", syslog: "10.120.50.44:514" },
   preferences: { autoIsolate: true, blockLateral: false },
@@ -132,7 +132,7 @@ function handleMockRoutes(url: string, method: string, requestData: any) {
     if (p.includes("xz-utils") || p.includes("xz")) {
       return {
         role: "assistant",
-        content: "### VYUHA.AI SOC Triage Report\nActive exploit traces of **CVE-2024-3094** detected on host **web-prod-ubuntu-01**.\n\n*   **Vulnerability status**: CRITICAL (CVSS Score 10.0)\n*   **Mitigation Playbook**: I recommend immediate network isolation of the VLAN segment.",
+        content: "### ZORA SOC Triage Report\nActive exploit traces of **CVE-2024-3094** detected on host **web-prod-ubuntu-01**.\n\n*   **Vulnerability status**: CRITICAL (CVSS Score 10.0)\n*   **Mitigation Playbook**: I recommend immediate network isolation of the VLAN segment.",
         codeBlock: {
           language: "bash",
           code: "# Quarantine host at active gateway\niptables -A INPUT -s 10.120.40.8 -j DROP"

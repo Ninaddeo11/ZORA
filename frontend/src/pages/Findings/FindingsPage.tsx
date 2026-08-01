@@ -26,7 +26,7 @@ import {
   ChevronRight,
   RefreshCw
 } from "lucide-react";
-import { useIncidentsData, useUpdateIncidentMutation, useResetTelemetryMutation } from "../../hooks/queries/useVyuhaQueries";
+import { useIncidentsData, useUpdateIncidentMutation, useResetTelemetryMutation } from "../../hooks/queries/useZoraQueries";
 import { Incident, Severity, IncidentStatus } from "../../types";
 import { Card, CardContent } from "../../components/ui/Card";
 import { Badge } from "../../components/ui/Badge";

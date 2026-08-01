@@ -17,7 +17,7 @@ import {
   Network,
 } from "lucide-react";
 import { useAuth } from "../hooks/useAuth";
-import { useIncidentsData, useApprovalsData } from "../hooks/queries/useVyuhaQueries";
+import { useIncidentsData, useApprovalsData } from "../hooks/queries/useZoraQueries";
 import { cn } from "../utils/cn";
 
 interface SidebarProps {
@@ -87,7 +87,7 @@ export function Sidebar({ isCollapsed, onToggleCollapse, onNavigate }: SidebarPr
             </div>
             {!isCollapsed && (
               <div>
-                <p className="text-sm font-semibold tracking-tight text-slate-900 dark:text-slate-100">VYUHA<span className="text-cyber-primary">.AI</span></p>
+                <p className="text-sm font-semibold tracking-tight text-slate-900 dark:text-slate-100">ZORA<span className="text-cyber-primary">.AI</span></p>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">SOC Console</p>
               </div>
             )}
@@ -133,7 +133,7 @@ export function Sidebar({ isCollapsed, onToggleCollapse, onNavigate }: SidebarPr
         <div className={cn("flex items-center justify-between rounded-2xl px-2 py-2", isCollapsed ? "justify-center" : "border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-950")}>
           <div className="flex min-w-0 items-center gap-2.5">
             <img
-              src={user?.avatar || "https://api.dicebear.com/7.x/identicon/svg?seed=vyuha"}
+              src={user?.avatar || "https://api.dicebear.com/7.x/identicon/svg?seed=zora"}
               alt="Avatar"
               className="h-9 w-9 rounded-full border border-slate-200 bg-slate-50"
             />

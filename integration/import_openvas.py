@@ -1,5 +1,5 @@
 """
-VYUHA.AI — OpenVAS / Greenbone (GVM) XML report importer.
+ZORA — OpenVAS / Greenbone (GVM) XML report importer.
 
 Mirrors import_nmap.py's structure and env vars exactly, so it drops into
 the same integration module with no new setup:

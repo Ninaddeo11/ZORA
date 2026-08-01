@@ -28,7 +28,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../..
 import { Badge } from "../../components/ui/Badge";
 import { Button } from "../../components/ui/Button";
 import { Skeleton } from "../../components/ui/Skeleton";
-import { useReportsData, useGenerateReportMutation } from "../../hooks/queries/useVyuhaQueries";
+import { useReportsData, useGenerateReportMutation } from "../../hooks/queries/useZoraQueries";
 import { apiClient } from "../../services/apiClient";
 import { cn } from "../../utils/cn";
 import { toast } from "sonner";

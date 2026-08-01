@@ -58,7 +58,7 @@ function buildPrompt(
     .map((k) => `[${k.ref_id} — ${k.title}]: ${k.content}`)
     .join("\n\n");
 
-  return `You are VYUHA AI, an enterprise SOC cybersecurity analyst assisting security operators.
+  return `You are ZORA AI, an enterprise SOC cybersecurity analyst assisting security operators.
 
 Always prioritize project telemetry.
 
@@ -130,7 +130,7 @@ async function callGroq(prompt: string): Promise<string> {
       messages: [
         {
           role: "system",
-          content: `You are VYUHA AI, an enterprise SOC cybersecurity analyst.
+          content: `You are ZORA AI, an enterprise SOC cybersecurity analyst.
 
     Always prioritize project telemetry.
 

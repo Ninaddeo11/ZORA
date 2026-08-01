@@ -3,7 +3,7 @@ import { authenticate } from "../core/auth";
 import { db } from "../core/db";
 
 let localSettings = {
-  profile: { name: "Kaveesh", email: "kaveesh@vyuha.ai", title: "Senior SOC Analyst" },
+  profile: { name: "Kaveesh", email: "kaveesh@zora.ai", title: "Senior SOC Analyst" },
   theme: { contrast: "standard" },
   notifications: { slack: "https://hooks.slack.com/services/T00/B00/X00", syslog: "10.120.50.44:514" },
   preferences: { autoIsolate: true, blockLateral: false },
@@ -28,7 +28,7 @@ export default async function settingsRoutes(app: FastifyInstance) {
           ...localSettings,
           profile: {
             name: metadata.name || "Kaveesh",
-            email: metadata.email || userData.user.email || "kaveesh@vyuha.ai",
+            email: metadata.email || userData.user.email || "kaveesh@zora.ai",
             title: metadata.title || "Senior SOC Analyst"
           }
         };
@@ -73,7 +73,7 @@ export default async function settingsRoutes(app: FastifyInstance) {
             const metadata = userData.user.user_metadata || {};
             localSettings.profile = {
               name: metadata.name || "Kaveesh",
-              email: metadata.email || userData.user.email || "kaveesh@vyuha.ai",
+              email: metadata.email || userData.user.email || "kaveesh@zora.ai",
               title: metadata.title || "Senior SOC Analyst"
             };
           }

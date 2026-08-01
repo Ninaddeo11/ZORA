@@ -71,7 +71,7 @@ export const mockIncidents: Incident[] = [
     ip: "10.120.40.112",
     timestamp: "2026-07-11T20:12:00Z",
     description: "Rapid Active Directory schema query from host executing local script. Administrator verified audit.",
-    detector: "VYUHA Core Agent"
+    detector: "ZORA Core Agent"
   }
 ];
 
@@ -197,7 +197,7 @@ export const mockApprovalTasks: ApprovalTask[] = [
     id: "APP-0209",
     action: "isolate_host",
     target: "web-prod-ubuntu-01",
-    requester: "VYUHA.AI Copilot (Incident Playbook-2)",
+    requester: "ZORA Copilot (Incident Playbook-2)",
     reason: "Severe brute-force compromise and suspected lateral movement attempt detected.",
     status: "pending",
     timestamp: "2026-07-12T03:32:00Z",
@@ -227,11 +227,11 @@ export const mockApprovalTasks: ApprovalTask[] = [
     id: "APP-0207",
     action: "quarantine_file",
     target: "C:\\Users\\Guest\\Downloads\\malware.exe on workstation-09",
-    requester: "VYUHA Core Agent",
+    requester: "ZORA Core Agent",
     reason: "SHA-256 matches known ransomware signature (LockBit 3.0 variant).",
     status: "approved",
     timestamp: "2026-07-11T22:30:10Z",
-    details: "Encrypt and move file to secure repository directory C:\\ProgramData\\Vyuha\\Quarantine"
+    details: "Encrypt and move file to secure repository directory C:\\ProgramData\\Zora\\Quarantine"
   }
 ];
 

@@ -17,7 +17,7 @@ import {
   ArrowLeft
 } from "lucide-react";
 import { useAuth } from "../../hooks/useAuth";
-import { useSettingsData, useUpdateSettingsMutation } from "../../hooks/queries/useVyuhaQueries";
+import { useSettingsData, useUpdateSettingsMutation } from "../../hooks/queries/useZoraQueries";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../../components/ui/Card";
 import { Badge } from "../../components/ui/Badge";
 import { Button } from "../../components/ui/Button";
@@ -45,7 +45,7 @@ export function SettingsPage() {
 
   // Profile forms state
   const [profileName, setProfileName] = useState(user?.username || "Kaveesh");
-  const [profileEmail, setProfileEmail] = useState("kaveesh@vyuha.ai");
+  const [profileEmail, setProfileEmail] = useState("kaveesh@zora.ai");
   const [profileTitle, setProfileTitle] = useState("Senior SOC Analyst");
 
   // Theme states
@@ -58,8 +58,8 @@ export function SettingsPage() {
   // API Keys state
   const [showKeyId, setShowKeyId] = useState<string | null>(null);
   const [apiKeys, setApiKeys] = useState<ApiKeyItem[]>([
-    { id: "key-1", name: "Palo Alto Edge Collector", key: "vyuha_live_pk_88d29a1a44c4b223", created: "2026-06-12", status: "active" },
-    { id: "key-2", name: "Sentinel Workstation Agent", key: "vyuha_live_pk_12d09f3b14a2b918", created: "2026-07-02", status: "active" }
+    { id: "key-1", name: "Palo Alto Edge Collector", key: "zora_live_pk_88d29a1a44c4b223", created: "2026-06-12", status: "active" },
+    { id: "key-2", name: "Sentinel Workstation Agent", key: "zora_live_pk_12d09f3b14a2b918", created: "2026-07-02", status: "active" }
   ]);
 
   // Preferences toggles
@@ -128,7 +128,7 @@ export function SettingsPage() {
     const newKey: ApiKeyItem = {
       id: newId,
       name: "New Threat Sensor Ingest",
-      key: `vyuha_live_pk_${Math.random().toString(16).substring(2, 10)}b881b229`,
+      key: `zora_live_pk_${Math.random().toString(16).substring(2, 10)}b881b229`,
       created: new Date().toISOString().split("T")[0],
       status: "active"
     };

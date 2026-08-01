@@ -69,7 +69,7 @@ export interface LoginPageProps {
 }
 
 export function LoginPage({
-  title = "Sign In to Vyuha",
+  title = "Sign In to Zora",
   subtitle = "Enter administrative operator credentials to access operations workspace.",
   role = "admin",
   accentColor = "blue",
@@ -139,7 +139,7 @@ export function LoginPage({
               {role === "admin" ? <Crown className="h-5.5 w-5.5" /> : <Shield className="h-5.5 w-5.5" />}
             </div>
             <span className="text-xl font-bold tracking-tight text-white">
-              VYUHA<span className={accentColor === "purple" ? "text-purple-500" : "text-blue-500"}>.AI</span>
+              ZORA<span className={accentColor === "purple" ? "text-purple-500" : "text-blue-500"}>.AI</span>
             </span>
           </div>
           <p className="mt-2 text-[10px] font-mono font-bold tracking-[0.25em] text-slate-400 uppercase">
@@ -267,7 +267,7 @@ export function LoginPage({
               {role === "admin" ? <Crown className="h-4.5 w-4.5" /> : <Shield className="h-4.5 w-4.5" />}
             </div>
             <span className="text-md font-bold tracking-tight text-slate-900 dark:text-slate-100">
-              VYUHA<span className={accentColor === "purple" ? "text-purple-500" : "text-blue-500"}>.AI</span>
+              ZORA<span className={accentColor === "purple" ? "text-purple-500" : "text-blue-500"}>.AI</span>
             </span>
           </div>
           <span className="text-[9px] font-mono font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-900/50 px-2 py-0.5 rounded border border-slate-200/50 dark:border-slate-800/80">
@@ -437,7 +437,7 @@ export function LoginPage({
         </div>
 
         <div className="flex items-center justify-between text-[10px] text-slate-400 dark:text-slate-500 py-2 border-t border-slate-200/10 dark:border-slate-800/40 relative z-10 font-sans">
-          <span>&copy; {new Date().getFullYear()} VYUHA.AI. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} ZORA. All rights reserved.</span>
           <span className="flex gap-4">
             <a href="#" className="hover:underline hover:text-slate-650 dark:hover:text-slate-350 transition-colors">Privacy</a>
             <a href="#" className="hover:underline hover:text-slate-650 dark:hover:text-slate-350 transition-colors">Terms</a>

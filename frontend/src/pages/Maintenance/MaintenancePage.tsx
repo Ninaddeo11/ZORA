@@ -27,7 +27,7 @@ export function MaintenancePage() {
 
         <CardContent className="space-y-4 pt-0 text-center text-xs">
           <p className="text-slate-600 leading-relaxed font-sans px-4">
-            VYUHA.AI console is currently offline. Threat sensors remain active in background containment modes.
+            ZORA console is currently offline. Threat sensors remain active in background containment modes.
           </p>
 
           {/* Downtime timer */}
@@ -42,7 +42,7 @@ export function MaintenancePage() {
           {/* Contacts */}
           <div className="border-t border-slate-100 pt-4 flex items-center justify-center gap-2 font-mono text-[9.5px] text-slate-400">
             <ShieldAlert className="h-3.5 w-3.5 text-slate-400 shrink-0" />
-            <span>Support: soc-ops@vyuha.ai • DC hotline: +1 888-VYUHA-SOC</span>
+            <span>Support: soc-ops@zora.ai • DC hotline: +1 888-ZORA-SOC</span>
           </div>
         </CardContent>
       </Card>

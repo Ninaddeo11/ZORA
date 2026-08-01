@@ -8,7 +8,7 @@ import {
   Zap,
   Info
 } from "lucide-react";
-import { useApprovalsData, useResolveApprovalMutation } from "../../hooks/queries/useVyuhaQueries";
+import { useApprovalsData, useResolveApprovalMutation } from "../../hooks/queries/useZoraQueries";
 import { ApprovalTask } from "../../types";
 import { Card, CardContent } from "../../components/ui/Card";
 import { Badge } from "../../components/ui/Badge";

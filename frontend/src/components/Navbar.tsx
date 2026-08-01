@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, Search, MessageSquareCode, Bell, Sun, Moon, ShieldCheck, ShieldAlert, CheckSquare, FileText, Server, AlertCircle } from "lucide-react";
 import { useAuth } from "../hooks/useAuth";
-import { useIncidentsData, useNotificationsData } from "../hooks/queries/useVyuhaQueries";
+import { useIncidentsData, useNotificationsData } from "../hooks/queries/useZoraQueries";
 import { cn } from "../utils/cn";
 
 interface NavbarProps {
@@ -27,7 +27,7 @@ export function Navbar({ onOpenCommandMenu, onToggleCopilot, isCopilotOpen, isSi
   const { data: notifications } = useNotificationsData();
 
   useEffect(() => {
-    const storedTheme = window.localStorage.getItem("vyuha-theme");
+    const storedTheme = window.localStorage.getItem("zora-theme");
     const isDark = storedTheme ? storedTheme === "dark" : false;
     setThemeMode(isDark ? "night" : "day");
     document.documentElement.classList.toggle("dark", isDark);
@@ -35,7 +35,7 @@ export function Navbar({ onOpenCommandMenu, onToggleCopilot, isCopilotOpen, isSi
   }, []);
 
   useEffect(() => {
-    const storedRead = localStorage.getItem("vyuha_read_notifications");
+    const storedRead = localStorage.getItem("zora_read_notifications");
     if (storedRead) {
       try {
         setReadNotifications(JSON.parse(storedRead));
@@ -51,15 +51,15 @@ export function Navbar({ onOpenCommandMenu, onToggleCopilot, isCopilotOpen, isSi
     setThemeMode(nextMode);
     document.documentElement.classList.toggle("dark", isDark);
     document.documentElement.classList.remove("high-contrast");
-    window.localStorage.setItem("vyuha-theme", isDark ? "dark" : "light");
+    window.localStorage.setItem("zora-theme", isDark ? "dark" : "light");
   };
 
   const getBreadcrumbs = () => {
     const path = location.pathname;
-    if (path === "/") return ["VYUHA.AI", "Operations Dashboard"];
+    if (path === "/") return ["ZORA", "Operations Dashboard"];
 
     const parts = path.split("/").filter(Boolean);
-    const crumbs = ["VYUHA.AI"];
+    const crumbs = ["ZORA"];
 
     parts.forEach((part) => {
       const name = part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, " ");
@@ -71,7 +71,7 @@ export function Navbar({ onOpenCommandMenu, onToggleCopilot, isCopilotOpen, isSi
   const markAllAsRead = () => {
     if (notifications) {
       const allIds = notifications.map((n: any) => n.id);
-      localStorage.setItem("vyuha_read_notifications", JSON.stringify(allIds));
+      localStorage.setItem("zora_read_notifications", JSON.stringify(allIds));
       setReadNotifications(allIds);
     }
   };
@@ -79,7 +79,7 @@ export function Navbar({ onOpenCommandMenu, onToggleCopilot, isCopilotOpen, isSi
   const markAsRead = (id: string) => {
     if (!readNotifications.includes(id)) {
       const updated = [...readNotifications, id];
-      localStorage.setItem("vyuha_read_notifications", JSON.stringify(updated));
+      localStorage.setItem("zora_read_notifications", JSON.stringify(updated));
       setReadNotifications(updated);
     }
   };
@@ -249,7 +249,7 @@ export function Navbar({ onOpenCommandMenu, onToggleCopilot, isCopilotOpen, isSi
           </button>
           
           <div className="flex items-center gap-2 border-l theme-border pl-3">
-            <img src={user?.avatar || "https://api.dicebear.com/7.x/identicon/svg?seed=vyuha"} alt="Profile" className="h-9 w-9 rounded-full border border-slate-200 bg-slate-50" />
+            <img src={user?.avatar || "https://api.dicebear.com/7.x/identicon/svg?seed=zora"} alt="Profile" className="h-9 w-9 rounded-full border border-slate-200 bg-slate-50" />
             <div className="hidden xl:block text-left">
               <p className="text-sm font-semibold theme-text">{user?.username || "Operator"}</p>
               <div className="mt-0.5 flex items-center gap-1 text-[10px] uppercase tracking-[0.2em] text-slate-555">

@@ -58,7 +58,7 @@ export default async function dashboardRoutes(app: FastifyInstance) {
           ip: asset ? asset.ip_address || "0.0.0.0" : "0.0.0.0",
           timestamp: f.detected_at || new Date().toISOString(),
           description: f.description || "",
-          detector: "VYUHA Core Agent"
+          detector: "ZORA Core Agent"
         };
       });
 
@@ -74,7 +74,7 @@ export default async function dashboardRoutes(app: FastifyInstance) {
           id: appr.id,
           action: deduceAction(appr.recommended_fix, finding?.vuln_category),
           target: asset ? asset.hostname : "unknown",
-          requester: "VYUHA Core Agent",
+          requester: "ZORA Core Agent",
           reason: finding ? finding.description || "Suspicious event" : "Security threat mitigation required",
           status: appr.status || "pending",
           timestamp: appr.created_at || new Date().toISOString(),

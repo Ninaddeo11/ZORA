@@ -15,7 +15,7 @@ import { Card, CardContent } from "../../components/ui/Card";
 import { Badge } from "../../components/ui/Badge";
 import { Button } from "../../components/ui/Button";
 import { cn } from "../../utils/cn";
-import { useCopilotMutation, useEndpointsData } from "../../hooks/queries/useVyuhaQueries";
+import { useCopilotMutation, useEndpointsData } from "../../hooks/queries/useZoraQueries";
 
 // Conversational interface types
 interface Message {
@@ -53,7 +53,7 @@ export function CopilotPage() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hello! I am VYUHA.AI Security Copilot. I scan system logs, triage endpoint CVE exposures, and deploy Palo Alto edge containment playbooks. How can I assist your SOC analysis today?"
+      content: "Hello! I am ZORA Security Copilot. I scan system logs, triage endpoint CVE exposures, and deploy Palo Alto edge containment playbooks. How can I assist your SOC analysis today?"
     }
   ]);
   
@@ -189,7 +189,7 @@ export function CopilotPage() {
     setMessages([
       {
         role: "assistant",
-        content: "New chat session initialized. How can VYUHA.AI Security Copilot assist your SOC investigation today?"
+        content: "New chat session initialized. How can ZORA Security Copilot assist your SOC investigation today?"
       }
     ]);
   };
@@ -409,7 +409,7 @@ export function CopilotPage() {
             <div className="relative border border-slate-200 focus-within:border-brand-accent/50 focus-within:ring-2 focus-within:ring-brand-accent/15 rounded-md bg-slate-50/30 flex items-center pr-3 transition-all h-10 shadow-sm">
               <input
                 type="text"
-                placeholder="Ask VYUHA.AI Security Copilot a question..."
+                placeholder="Ask ZORA Security Copilot a question..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => {
@@ -427,7 +427,7 @@ export function CopilotPage() {
             </div>
             
             <div className="text-[8.5px] font-mono text-slate-400 text-center select-none">
-              Press Enter to send • VYUHA.AI Copilot may generate logs matching simulated SOC triages
+              Press Enter to send • ZORA Copilot may generate logs matching simulated SOC triages
             </div>
           </div>
         </div>

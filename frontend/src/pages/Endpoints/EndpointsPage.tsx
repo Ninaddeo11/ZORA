@@ -6,7 +6,7 @@ import {
   Server,
   ArrowLeft
 } from "lucide-react";
-import { useEndpointsData } from "../../hooks/queries/useVyuhaQueries";
+import { useEndpointsData } from "../../hooks/queries/useZoraQueries";
 import { Card, CardContent } from "../../components/ui/Card";
 import { Badge } from "../../components/ui/Badge";
 import { Button } from "../../components/ui/Button";

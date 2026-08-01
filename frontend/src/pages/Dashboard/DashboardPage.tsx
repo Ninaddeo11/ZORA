@@ -26,7 +26,7 @@ import {
   Clock,
   Sparkles
 } from "lucide-react";
-import { useDashboardData } from "../../hooks/queries/useVyuhaQueries";
+import { useDashboardData } from "../../hooks/queries/useZoraQueries";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../../components/ui/Card";
 import { Badge } from "../../components/ui/Badge";
 import { Button } from "../../components/ui/Button";

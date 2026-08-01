@@ -1,5 +1,5 @@
 """
-VYUHA.AI — AI-Powered EDR Platform v6.0
+ZORA — AI-Powered EDR Platform v6.0
 Complete Production-Grade System
 
 CHANGELOG v5 -> v6 (addressing review feedback):
@@ -23,7 +23,7 @@ CHANGELOG v5 -> v6 (addressing review feedback):
 
 QUICK START:
     pip install streamlit requests networkx matplotlib pandas sentence-transformers faiss-cpu groq pyyaml pypdf xmltodict
-    streamlit run vyuha_dashboard.py
+    streamlit run zora_dashboard.py
 """
 
 import copy
@@ -95,7 +95,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[logging.StreamHandler(sys.stdout)]
 )
-logger = logging.getLogger("VYUHA.AI")
+logger = logging.getLogger("ZORA")
 
 # ============================================================
 # SESSION STATE INITIALIZATION (MUST BE FIRST)
@@ -127,7 +127,7 @@ initialize_all_session_state()
 # CONFIGURATION
 # ============================================================
 APP_CONFIG = {
-    "app": {"name": "VYUHA.AI — EDR Dashboard", "version": "6.0.0", "environment": "production"},
+    "app": {"name": "ZORA — EDR Dashboard", "version": "6.0.0", "environment": "production"},
     "ui": {
         "severity_colors": {"Critical": "#d9363e", "High": "#e08a1e", "Medium": "#d9b310", "Low": "#3a8f3a"},
         "theme": {"dark": {
@@ -1609,7 +1609,7 @@ st.markdown(generate_dynamic_css(), unsafe_allow_html=True)
 with st.sidebar:
     st.markdown("""
     <div style="text-align: center; padding: 10px 0;">
-        <h2 style="color: #f4f6fb; margin: 0;">🛡️ VYUHA.AI</h2>
+        <h2 style="color: #f4f6fb; margin: 0;">🛡️ ZORA</h2>
         <p style="color: #8fa0c4; font-size: 13px; margin: 4px 0;">AI-Powered EDR Platform</p>
     </div>
     """, unsafe_allow_html=True)
@@ -1634,7 +1634,7 @@ with st.sidebar:
     if not st.session_state.system_initialized:
         st.markdown("---")
         if st.button("🚀 Quick Start (Load Sample Data)", type="primary", use_container_width=True):
-            with st.spinner("Initializing VYUHA.AI..."):
+            with st.spinner("Initializing ZORA..."):
                 st.session_state.findings = generate_sample_findings()
                 if FAISS_SUPPORT and not st.session_state.kb_indexed:
                     index_knowledge_base_documents()
@@ -1732,7 +1732,7 @@ with st.sidebar:
         st.rerun()
 
     st.markdown("---")
-    st.caption(f"🛡️ VYUHA.AI v{APP_CONFIG['app']['version']}")
+    st.caption(f"🛡️ ZORA v{APP_CONFIG['app']['version']}")
     st.caption(f"Findings: {len(st.session_state.findings)} | Scans: {len(st.session_state.scan_history)} | "
                f"KB docs: {len(st.session_state.vector_docs)}")
     st.caption("Live data: NVD · CISA KEV · FIRST.org EPSS — no hardcoded threat lists")
@@ -1759,7 +1759,7 @@ overdue_count = sum(1 for f in findings if f.get("is_overdue"))
 if not st.session_state.system_initialized:
     st.markdown("""
     <div style="text-align: center; padding: 60px 20px;">
-        <h1 style="color: #f4f6fb; font-size: 48px; margin-bottom: 10px;">🛡️ VYUHA.AI</h1>
+        <h1 style="color: #f4f6fb; font-size: 48px; margin-bottom: 10px;">🛡️ ZORA</h1>
         <p style="color: #8fa0c4; font-size: 20px; margin-bottom: 40px;">AI-Powered EDR Platform with Hybrid Risk Intelligence</p>
     </div>
     """, unsafe_allow_html=True)
@@ -2177,7 +2177,7 @@ elif page == "💬 AI Copilot":
 
                         ctx = "\n\n---\n\n".join(ctx_parts)
 
-                        system_prompt = f"""You are VYUHA.AI Security Copilot. Analyze the current attack paths and provide actionable, evidence-backed recommendations.
+                        system_prompt = f"""You are ZORA Security Copilot. Analyze the current attack paths and provide actionable, evidence-backed recommendations.
 
                         ATTACK PATH CONTEXT (live from system):
                         {st.session_state.attack_path_context[:1500]}
@@ -2333,6 +2333,6 @@ elif page == "⏱️ Remediation & Escalation" and is_admin:
 # ---------------- FOOTER ----------------
 st.markdown("---")
 st.markdown(f"""<div style="text-align:center;padding:10px 0;">
-<p style="color:#8fa0c4;font-size:12px;margin:0;">🛡️ <strong>VYUHA.AI</strong> v{APP_CONFIG['app']['version']} |
+<p style="color:#8fa0c4;font-size:12px;margin:0;">🛡️ <strong>ZORA</strong> v{APP_CONFIG['app']['version']} |
 5-Dimension Hybrid Risk Intelligence | Live NVD/KEV/EPSS | Auto Attack-Path RAG |
 Nmap/OpenVAS/Generic Import | No hardcoded threat-intel lists</p></div>""", unsafe_allow_html=True)

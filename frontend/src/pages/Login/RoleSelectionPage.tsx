@@ -57,7 +57,7 @@ export function RoleSelectionPage() {
             <Shield className="h-5 w-5" />
           </div>
           <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white font-sans">
-            VYUHA<span className="text-blue-500">.AI</span>
+            ZORA<span className="text-blue-500">.AI</span>
           </span>
         </motion.div>
         <motion.p variants={itemVariants} className="text-[10px] font-mono font-bold tracking-[0.25em] text-slate-400 dark:text-slate-500 uppercase mb-8">
@@ -66,7 +66,7 @@ export function RoleSelectionPage() {
 
         {/* Title */}
         <motion.h1 variants={itemVariants} className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white font-sans text-center">
-          Welcome to VYUHA.AI
+          Welcome to ZORA
         </motion.h1>
         <motion.p variants={itemVariants} className="mt-2 text-sm text-slate-500 dark:text-slate-400 font-sans text-center max-w-md">
           Select how you want to access the platform.
@@ -134,7 +134,7 @@ export function RoleSelectionPage() {
         {/* Footer */}
         <motion.div variants={itemVariants} className="flex items-center gap-1.5 text-[10px] text-slate-400 dark:text-slate-500 font-mono mt-16">
           <Terminal className="h-3.5 w-3.5" />
-          <span>VYUHA SOC DISPATCHER // MULTI-ROUTING GATEWAY</span>
+          <span>ZORA SOC DISPATCHER // MULTI-ROUTING GATEWAY</span>
         </motion.div>
       </motion.div>
     </div>

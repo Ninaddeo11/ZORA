@@ -24,7 +24,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const stored = localStorage.getItem("vyuha_auth_user");
+    const stored = localStorage.getItem("zora_auth_user");
     if (stored) {
       try {
         const parsed = JSON.parse(stored);
@@ -39,7 +39,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                 username: res.data.profile.name || parsed.username,
                 role: res.data.profile.title || parsed.role,
               };
-              localStorage.setItem("vyuha_auth_user", JSON.stringify(updated));
+              localStorage.setItem("zora_auth_user", JSON.stringify(updated));
               setUser(updated);
             }
           })
@@ -47,7 +47,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             console.error("Failed to sync profile settings from backend:", err);
           });
       } catch (e) {
-        localStorage.removeItem("vyuha_auth_user");
+        localStorage.removeItem("zora_auth_user");
       }
     }
     setIsLoading(false);
@@ -65,7 +65,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       avatar: "https://api.dicebear.com/7.x/identicon/svg?seed=" + (username || "Kaveesh")
     };
 
-    localStorage.setItem("vyuha_auth_user", JSON.stringify(defaultUser));
+    localStorage.setItem("zora_auth_user", JSON.stringify(defaultUser));
     setUser(defaultUser);
     setIsLoading(false);
     
@@ -78,7 +78,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             username: res.data.profile.name || defaultUser.username,
             role: res.data.profile.title || defaultUser.role,
           };
-          localStorage.setItem("vyuha_auth_user", JSON.stringify(updated));
+          localStorage.setItem("zora_auth_user", JSON.stringify(updated));
           setUser(updated);
         }
       })
@@ -88,7 +88,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const logout = () => {
-    localStorage.removeItem("vyuha_auth_user");
+    localStorage.removeItem("zora_auth_user");
     setUser(null);
   };
 
@@ -96,7 +96,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setUser((prev) => {
       if (!prev) return null;
       const next = { ...prev, ...updatedFields };
-      localStorage.setItem("vyuha_auth_user", JSON.stringify(next));
+      localStorage.setItem("zora_auth_user", JSON.stringify(next));
       return next;
     });
   };
